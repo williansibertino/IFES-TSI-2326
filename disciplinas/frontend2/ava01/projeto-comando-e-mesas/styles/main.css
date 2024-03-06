@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Stylers of headers */
+#hd {
+    width: 100vw;
+    height: 90px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    background: #fff462;
+    border-bottom: 0.1px solid #3b3b3b20;
+}
+.logo {
+    height: 80px;
+}
+.links {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Rubik',sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.id-logo {
+    display: flex;
+    align-items: center;
+}
+.id-logo > h1 {
+    font: normal 2rem 'Madimi One';
+    color: #1f1f1f;
+}
+.links-disabled {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #1f1f1f;
+    margin-left: 15px;
+}
+.links-active {
+    padding: 10px 20px;
+    color: #fafafa;
+    background: #1f1f1f;
+    border-radius: 1px;
+}
+
+/* Stylers of main */
+#hd-slide {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: #d1e489;
+}
+.logo-prato {
+    display: block;
+    margin: auto;
+    max-width: 600px;
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+    padding: 30px 0px;
+}
+.box-slide {
+    max-width: 600px;
+    padding: 10px 50px;
+}
+.titulo-slide {
+    font: bolder 2rem 'Lilita One';
+    color: #1f1f1f;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.pgh-slide {
+    font: 500 1.2rem 'Rubik';
+    color: #1f1f1f;
+    margin-bottom: 30px;
+}
+.btn-slide {
+    background: #1f1f1f;
+    font: 600 1.2rem 'Rubik';
+    color: #fafafa;
+    padding: 10px 20px;
+    border-radius: 1px;
+    text-transform: uppercase;
+}

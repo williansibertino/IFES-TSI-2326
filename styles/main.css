@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background: #b2bec3;
+    font: normal 1rem JetBrains Mono;
+    color: #fff;
+}
+
+/*Tag Header*/
+#infoHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+
+    background: #dfe6e9;
+    border-bottom: 1px solid #2c3e50;
+    border-radius: 0;
+}
+.infoHeaderFirst {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+}
+.infoHeaderLast {
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+}
+.linkPaginas {
+    padding: 5px 20px;
+    color: #fff;
+    background: #2d3436;
+    border-radius: 2px;
+}
+.imageAvatar {
+    height: 40px;
+    margin-left: 10px;
+    border: 2px solid #fff;
+    border-radius: 100%;
+}
+.tituloHeader {
+    color: #2d3436;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-right: 30px;
+}
+.nomeUsuario {
+    color: #2d3436;
+}
+
+/*Tag Main*/
+#infoMain {
+    width: 90vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.tituloMain {
+    font-size: 1.5rem;
+    color: #2d3436;
+    font-weight: 500;
+    padding: 20px;
+    border-bottom: 1px solid #2d3436;
+}
+.linkDisciplina {
+    margin: 50px;
+    padding: 20px;
+    color: #2d3436;
+    background: #dfe6e9;
+    border-radius: 2px;
+}
+.linkDisciplina > a {
+    color: #2d3436;
+}
+.linkDisciplina:hover {
+    border: 2px solid #2d3436;
+}
