@@ -54,7 +54,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     background: #d1e489;
 }
 .logo-prato {
@@ -86,4 +85,83 @@
     padding: 10px 20px;
     border-radius: 1px;
     text-transform: uppercase;
+}
+/*Styles Page Mesas */
+#reservas {
+    background: #d1e489;
+    padding: 50px;
+}
+#reservas h1 {
+    text-align: center;
+    text-decoration: dotted;
+    font: bold 2rem 'Rubik';
+}
+.mesas {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 2rem;
+    color: #1f1f1f;
+}
+.cardMesas {
+    padding: 1.5rem;
+    background: #c0e440;
+    margin: 5px;
+    border-radius: 2px;
+}
+.mesas h2 {
+    font: 600 1.5rem 'Rubik';
+    padding-bottom: 0.5rem;
+}
+.mesas p {
+    font: normal 1rem 'Rubik';
+    text-indent: 30px;
+    margin-bottom: 0.5rem;
+}
+.mesas a {
+    text-align: center;
+    display: block;
+    padding: 10px 20px;
+    background: #1f1f1f;
+    color: #fafafa;
+    text-transform: uppercase;
+    font: normal 1rem 'Rubik';
+    max-width: 140px;
+}
+/* Styles Page Comanda */
+.registro {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 2rem;
+    color: #1f1f1f;
+}
+.cardRegistro {
+    padding: 1.5rem;
+    background: #c0e440;
+    margin: 5px;
+    border-radius: 2px;
+    width: 400px;
+}
+.registro h2 {
+    font: 600 1.5rem 'Rubik';
+    padding-bottom: 0.5rem;
+}
+.registro p {
+    font: normal 1rem 'Rubik';
+    margin-bottom: 0.5rem;
+}
+.registro a {
+    text-align: center;
+    display: block;
+    padding: 10px 20px;
+    background: #1f1f1f;
+    color: #fafafa;
+    text-transform: uppercase;
+    font: normal 1rem 'Rubik';
+    max-width: 160px;
+}
+.linkCardRegistro {
+    display: flex;
+    justify-content: space-between;
 }
