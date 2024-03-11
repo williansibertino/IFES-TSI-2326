@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensei | Burger Japonês</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+    </style>
+</head>
+<body><!-- -->
+    <header id="telaInicial">
+        <div class="telaHeader">
+            <div>
+                <h1 class="logo">Sensei</h1>
+            </div>
+            <ul class="linksHeader">
+                <li><a class="link linkActive" href="#telaReserva">Reservas</a></li>
+                <li><a class="link" href="#telaInicial">Cardápio</a></li>
+                <li><a class="link" href="#telaContato">Sobre</a></li>
+                <li><a class="link" href="#telaContato">Contato</a></li>
+            </ul>
+        </div>
+        <div class="telaSlide">
+            <h1>Boa Comida sao escolhas para bons investimentos</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt nobis amet quisquam recusandae quia! Ea amet inventore eveniet. Quo aliquid nemo ex hic delectus laboriosam, amet voluptate cumque libero voluptates?
+            </p>
+            <div>
+                <a class="btnSlide" href="#telaReserva">Ver Cardápio</a>
+            </div>
+        </div>
+        <div class="btnTelas">
+            <a href="#telaReserva">Descer</a>
+        </div>
+    </header> <!-- -->
+    <main id="telaReserva">
+        <div class="registroReserva">
+            <h3>Mesas Reservadas</h3>
+            <div class="mesasReservadas">
+                <div class="cardReservas">
+                    <p>Mesa 01: </p>
+                    <p>Willian Silva</p>
+                </div>
+                <div class="cardReservas">
+                    <p>Mesa 02: </p>
+                    <p>Bruno Matias</p>
+                </div>
+            </div>
+        </div>
+        <div class="cadastroReserva">
+            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+            <p>Incidunt consequatur voluptatem pariatur totam ipsam ea? Quo corporis similique suscipit neque vitae, nisi deserunt a, odit laboriosam officiis fuga porro molestias?</p>
+            <div>
+                <a id="btnCadastro">Crie Sua Reserva +</a>
+            </div>
+        </div>
+    </main>
+    <footer id="telaContato">
+
+    </footer>
+
+    <script>
+        // Criando um objeto, localizando no DOM e Salvando no btnCadastro
+        let btnCadastro = window.document.getElementById('btnCadastro');
+
+        // Adicionando um evento ao objeto do botão criado, Evento de clicar
+        btnCadastro.addEventListener('click', criarReserva);
+
+        // Criando uma função
+        function criarReserva() {
+            // recebendo o valor da variável através do botão
+            let nomeCliente = prompt('Digite seu nome: ');
+            let numeroMesa = prompt('Digite o numero da mesa: ');
+
+            //  cria um novo elemento p identificado como cliente
+            let cliente = window.document.createElement('p');
+
+            // cria um novo registro de texto com a Juncão com o nome do cliente e o numero da mesa
+            let mesaReservada = window.document.createTextNode(`Mesa ${numeroMesa}: ${nomeCliente}`);
+            
+            // Salva o texto criado com as variaveis nome e numero da mesa no objeto cliente
+            cliente.appendChild(mesaReservada);
+
+            // Adiciona um estilo ao objeto cliente
+            cliente.classList.add('cardReservas');
+
+            // Localiza a div onde contem a classe registrada e adiciona dentro do elemento o objeto criado junto com todas as informações 
+            document.querySelector('div.mesasReservadas').appendChild(cliente);
+        }
+    </script>
+</body>
+</html>

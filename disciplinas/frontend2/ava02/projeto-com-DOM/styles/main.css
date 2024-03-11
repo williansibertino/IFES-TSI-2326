@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #000;
+    font-family: 'Open Sans',sans-serif;
+    color: #fff;
+}
+
+#telaInicial {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url('../img/burger.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#telaReserva {
+    width: 100%;
+    min-height: 100vh;
+}
+#telaContato {
+    width: 100%;
+    min-height: 100vh;
+}
+.telaHeader {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.linksHeader {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+.logo {
+    font-weight: 600;
+    font-style: italic;
+    font-size: 1.5rem;
+    padding: 1rem;
+    color: #2b5ec2;
+}
+.link {
+    color: #757575;
+    text-decoration: none;
+    padding: 1rem;
+    font-weight: 600;
+}
+.linkActive {
+    color: #2b5ec2;
+}
+.telaSlide {
+    width: 50%;
+}
+.telaSlide h1{
+    font-weight: 300;
+    font-size: 2rem;
+    padding: 1rem;
+}
+.telaSlide p {
+    font-weight: 300;
+    font-size: 1rem;
+    padding: 1rem;
+    color: #fff;
+}
+.telaSlide div {
+    padding: 1rem;
+}
+.btnSlide {
+    padding: 1rem 2rem;
+    background: #2b5ec2;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 2rem;
+}
+.btnTelas {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.btnTelas a {
+    background: #000;
+    padding: 0.2rem 1rem;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 10px 10px 0px 0px;
+}
+
+/* Styles main */
+#telaReserva {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.registroReserva {
+    flex: 1;
+}
+.cadastroReserva {
+    flex: 1;
+}
+.cadastroReserva h2 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    padding: 1rem;
+    color: #2b5ec2;
+}
+.cadastroReserva p {
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 1rem;
+    color: #757575;
+}
+.cadastroReserva div {
+    padding: 1rem;
+}
+#btnCadastro {
+    padding: 1rem 2rem;
+    background: #2b5ec2;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+.registroReserva h3 {
+    font-weight: 300;
+    font-style: italic;
+    font-size: 2rem;
+    text-align: center;
+}
+.cardReservas {
+    padding: 1rem;
+    margin-bottom: 10px;
+    background: #fff;
+    color: #2b5ec2;
+    font-weight: 700;
+    border-radius: 50px;
+}
+.registroReserva div {
+    padding: 1rem;
+}
