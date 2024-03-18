@@ -34,17 +34,22 @@
         <div id="sequencial" class="card">
             <h1>Busca Sequencial</h1>
             <p>Adapte o código disponibilizado de BUSCA SEQUENCIAL para que a busca seja feita em um vetor com 100 posições. Além disso crie uma variável que contabilize quantas comparações foram feitas até ser encontrado o número buscado.</p>
-            <button onclick="buscaSequencial(vetor,6)">Executar</button>
+            <button onclick="buscaSequencial(vetor,56)">Executar</button>
         </div>
         <div id="Binaria" class="card">
             <h1>Busca Binaria</h1>
             <p>Adapte o código disponibilizado de BUSCA BINÁRIA para que a busca seja feita em um vetor com 100 posições. Além disso crie uma variável que contabilize quantas comparações foram feitas até ser encontrado o número buscado.</p>
-            <button onclick="buscaBinaria(vetor,15)">Executar</button>
+            <button onclick="buscaBinaria(vetor,69)">Executar</button>
         </div>
     </div>
 
     <script>
-        var vetor = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+        let vetor = [];
+
+        for (let i = 1; i <= 100; i++) {
+            vetor.push(i);
+        }
+        console.log(vetor);
 
         function buscaSequencial(vetor, buscadorSequencial){
 
@@ -62,9 +67,9 @@
                 }
             }
             if(encontradoSequencial === true) {
-                alert(`O numero buscado foi ${buscadorSequencial} e foi encontrado na posição do vetor[${posicaoSequencial}] e foram feitas no total ${comparadorSequencial} Comparações ate ser encontrado.`);
+                alert(`O número buscado foi ${buscadorSequencial} \ne foi encontrado na posição [${posicaoSequencial}] \ne foram feitas no total ${comparadorSequencial} \nComparações ate ser encontrado.`);
             } else{
-                alert('nao foi possível encontrar esse numero.')
+                alert('Não foi possível encontrar esse numero neste vetor.')
             }
         }
 
@@ -89,9 +94,9 @@
                 }
             }
             if(encontradoBinaria === true) {
-                alert(`o numero ${buscadorBinaria} foi encontrado na posicao ${meio} e foram feitas ${comparadorBinario} comparações`);
+                alert(`O número ${buscadorBinaria} foi encontrado na posição [${meio}]\ne foram feitas ${comparadorBinario} comparações.`);
             } else {
-                alert(`numero ${buscadorBinaria} nao existe nesse vetor`);
+                alert(`Número ${buscadorBinaria} não existe nesse vetor.`);
             }
         }
     </script>
