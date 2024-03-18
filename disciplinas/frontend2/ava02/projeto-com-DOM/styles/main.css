@@ -12,6 +12,8 @@ body {
 #telaInicial {
     width: 100%;
     min-height: 100vh;
+    padding-left: 5rem;
+    padding-right: 5rem;
 
     display: flex;
     flex-direction: column;
@@ -19,11 +21,17 @@ body {
     background-image: url('../img/burger.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: right;
 }
 #telaReserva {
     width: 100%;
     min-height: 100vh;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    background-image: url('../img/batatafrita.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 #telaContato {
     width: 100%;
@@ -45,6 +53,7 @@ body {
     font-size: 1.5rem;
     padding: 1rem;
     color: #2b5ec2;
+    margin-right: 2rem;
 }
 .link {
     color: #757575;
@@ -62,6 +71,7 @@ body {
     font-weight: 300;
     font-size: 2rem;
     padding: 1rem;
+    text-transform: uppercase;
 }
 .telaSlide p {
     font-weight: 300;
@@ -88,7 +98,7 @@ body {
 }
 .btnTelas a {
     background: #000;
-    padding: 0.2rem 1rem;
+    padding: 0.5rem;
     text-decoration: none;
     color: #fff;
     border-radius: 10px 10px 0px 0px;
@@ -108,13 +118,13 @@ body {
 }
 .cadastroReserva h2 {
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     padding: 1rem;
     color: #2b5ec2;
 }
 .cadastroReserva p {
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 1.2rem;
     padding: 1rem;
     color: #757575;
 }
@@ -147,3 +157,18 @@ body {
 .registroReserva div {
     padding: 1rem;
 }
+/* Style scrollBar*/
+body::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;               /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #000;        /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #2b5ec2;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 1px solid #000;  /* creates padding around scroll thumb */
+  }
