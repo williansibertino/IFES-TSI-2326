@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca Sequencial e Busca Binaria</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #6602a8;
+        }
+        .buscas {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            color: #000000;
+        }
+        .card {
+            width: 400px;
+            height: 200px;
+            border: 1px solid #000;
+            padding: 2rem;
+            background-color: #9a03ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="buscas">
+        <div id="sequencial" class="card">
+            <h1>Busca Sequencial</h1>
+            <p>Adapte o código disponibilizado de BUSCA SEQUENCIAL para que a busca seja feita em um vetor com 100 posições. Além disso crie uma variável que contabilize quantas comparações foram feitas até ser encontrado o número buscado.</p>
+            <button onclick="buscaSequencial(vetor,6)">Executar</button>
+        </div>
+        <div id="Binaria" class="card">
+            <h1>Busca Binaria</h1>
+            <p>Adapte o código disponibilizado de BUSCA BINÁRIA para que a busca seja feita em um vetor com 100 posições. Além disso crie uma variável que contabilize quantas comparações foram feitas até ser encontrado o número buscado.</p>
+            <button onclick="buscaBinaria(vetor,15)">Executar</button>
+        </div>
+    </div>
+
+    <script>
+        var vetor = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+
+        function buscaSequencial(vetor, buscadorSequencial){
+
+            var encontradoSequencial = false;
+            var posicaoSequencial;
+            var comparadorSequencial;
+
+            for(var i = 0; i < vetor.length; i++) {
+                comparadorSequencial = i;
+                console.log(comparadorSequencial);
+                if(vetor[i] === buscadorSequencial){
+                    encontradoSequencial = true;
+                    posicaoSequencial = i;
+                    break;
+                }
+            }
+            if(encontradoSequencial === true) {
+                alert(`O numero buscado foi ${buscadorSequencial} e foi encontrado na posição do vetor[${posicaoSequencial}] e foram feitas no total ${comparadorSequencial} Comparações ate ser encontrado.`);
+            } else{
+                alert('nao foi possível encontrar esse numero.')
+            }
+        }
+
+        function buscaBinaria(vetor, buscadorBinaria) {
+            var inicio = 0;
+            var fim = vetor.length - 1;
+            var meio;
+            var encontradoBinaria = false;
+            var comparadorBinario = 0;
+            while(inicio <= fim){
+                meio = Math.floor((inicio + fim)/2);
+                comparadorBinario += 1;
+                console.log(comparadorBinario);
+                alert(meio);
+                if(vetor[meio] === buscadorBinaria){
+                    encontradoBinaria = true;
+                    break;
+                } else if(vetor[meio] < buscadorBinaria){
+                    inicio = meio + 1;
+                } else {
+                    fim = meio - 1;
+                }
+            }
+            if(encontradoBinaria === true) {
+                alert(`o numero ${buscadorBinaria} foi encontrado na posicao ${meio} e foram feitas ${comparadorBinario} comparações`);
+            } else {
+                alert(`numero ${buscadorBinaria} nao existe nesse vetor`);
+            }
+        }
+    </script>
+</body>
+</html>
