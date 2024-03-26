@@ -5,120 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Criando um Arrow Function e inserindo informações no HTML usando Javascript</title>
     <style>
-        body {
-            background: #01022c;
-            width: 100vw;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            align-items: center;
-        }
-        h1 {
-            color: #fff;
-            text-align: center;
-            font-size: 1.5rem;
-        }
         * {
             margin: 0;
             padding: 0;
         }
-        .notas {
+        body {
+            width: 100vw;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 20px;
-        }
-        .notas label {
+
+            background-color: #01022c;
             color: #fff;
+            font-family: Arial;
         }
-        .notas input {
-            max-width: 100px;
+        .box {
+            max-width: 420px;
+            padding: 2rem;
+            border: 1px solid #fff;
         }
-        .medias {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 2rem;
-            color: #fff;
-            font-size: 20px;
+        .box h1 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
         }
-        .medias div {
+        .box p {
+            font: normal 1.2rem Arial;
+            margin: 5px auto;
+        }
+        #resultado {
+            margin-top: 1rem;
             padding: 1rem 2rem;
-            background-color: #525c5e;
+            background-color: #2427aa;
             text-align: center;
-            width: 200px;
-            cursor: pointer;
-        }
-        .resultado p {
-            padding: 1rem 2rem;
-            background-color: #525c5e;
-            color: #fff;
-            font-size: 2rem;
-            text-align: center;
-            width: 300px;
+            font: normal 2rem Arial;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>
-            Digite 03 notas no sistema abaixo e selecione a media desejada.
-        </h1>
-    </header>
-    <div>
-        <form class="notas">
-            <div>
-                <label>Nota 1</label><br>
-                <input id="nota1" type="number" value="0">
-            </div>
-            <div>
-                <label>Nota 2</label><br>
-                <input id="nota2" type="number" value="0">
-            </div>
-            <div>
-                <label>Nota 3</label><br>
-                <input id="nota3" type="number" value="0">
-            </div>
-        </form>
-    </div>
-    <div class="medias">
-        <div>
-            <p id="A">A : Media Aritmética</p>
-        </div>
-        <div>
-            <p id="P">P : Media Ponderada</p>
-        </div>
-        <div>
-            <p id="H">H : Media Harmonica</p>
-        </div>
-    </div>
-    <div class="resultado">
-        <p>Resultado</p>
+    <div class="box">
+        <h1>Acesse o console do navegador e repasse os parâmetros da Arrow function: </h1>
+        <p><i>calcularMedia(nota1, nota2, nota3, letra)</i> para mostrar somente no console ou</p>
+        <p><i>imprimirNoHtml(calcularMedia(nota1, nota2, nota3, letra))</i> para mostrar o resultado no html do site.</p>
+        <p id="resultado">Resultado</p>
     </div>
 
 
     <script>
-        let btnMedia = window.document.getElementById('A');
-        btnMedia = window.document.getElementById('P');
-        btnMedia = window.document.getElementById('H');
+        // Função com arrow function prosseguida de operador ternário
+        // Ela recebe tres notas, verifica qual letra e prossegue para calcular a media escolhida.
+        let calcularMedia = (nota1, nota2, nota3, letra) => media = (letra == 'A') ? media = (nota1 + nota2 + nota3) / 3 : (letra == 'P') ? media = (nota1 * 5 + nota2 * 3 + nota3 * 2) / 10 : (letra == 'H') ? media = 3 / (1/nota1 + 1/nota2 + 1/nota3) : 'Letra digitada invalida';
 
-        btnMedia.addEventListener('click', calcularMedia);
-
-        let calcularMedia = (nota1, nota2, nota3) => {
-            let nota1Valor = parseFloat(document.getElementById('nota1').value);
-            let nota2Valor = parseFloat(document.getElementById('nota2').value);
-            let nota3Valor = parseFloat(document.getElementById('nota3').value);
-            let soma = nota1Valor + nota2Valor + nota3Valor;
-
-            let nota = window.document.createElement('p');
-            let medias = window.document.createTextNode(`A soma dos números e ${nota1Valor} + ${nota2Valor} + ${nota3Valor} e ${soma}`);
-            nota.appendChild(medias);
-            
-            document.querySelector('div.resultado').appendChild(nota);
-        }
-
+        // Função que captura o elemento p, adiciona o valor da media no texto desse elemento no html
+        let imprimirNoHtml = (media) => p = window.document.getElementById('resultado').innerHTML = media;
+        // Chamando a função
+        imprimirNoHtml(calcularMedia(198,78,23,'A'));
+        
     </script>
 </body>
 </html>
