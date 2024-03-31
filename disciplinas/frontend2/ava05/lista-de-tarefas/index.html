@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="nomeLista">Lista de Tarefas</h1>
+            <div>
+                <form>
+                    <input id="nomeNovaTarefa" name="nomeTarefa" maxlength="60" size="24" type="text" placeholder="Digite Aqui" required>
+                    <button id="btnNovaTarefa" type="button" name="btnTarefa">Adicionar Tarefa</button>
+                </form>
+            </div>
+        </header>
+        <main>
+            <h1>Tarefas Cadastradas</h1>
+            <ul class="listaDeTarefas">
+               <li class="tarefa">
+                <div>
+                    <input class="btnConcluir" type="checkbox" name="btnConcluir">
+                    <p class="descricao marcarDescricao">Crie uma nova tarefa no campo <b>Digite Aqui</b></p>
+                </div>
+                <button class="btnApagar" type="button" name="btnApagar">X</button>
+               </li>
+
+               <li class="tarefa">
+                <div>
+                    <input class="btnConcluir" type="checkbox" name="btnConcluir">
+                    <p class="descricao marcarDescricao">Utilize o campo de checkbox para <b>Concluir Sua Tarefa</b></p>
+                </div>
+                <button class="btnApagar" type="button" name="btnApagar">X</button>
+               </li>
+
+               <li class="tarefa">
+                <div>
+                    <input class="btnConcluir" type="checkbox" name="btnConcluir">
+                    <p class="descricao marcarDescricao">Caso deseje apagar a tarefa criada, clique no botao de <b>X de Excluir</b></p>
+                </div>
+                <button class="btnApagar" type="button" name="btnApagar">X</button>
+               </li>
+            </ul>
+        </main>
+    </div>
+
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

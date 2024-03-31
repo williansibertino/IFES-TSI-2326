@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: 0;
+}
+body {
+    background-color: #f7f1e3;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Oswald", sans-serif;
+}
+.container {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+}
+header {
+    width: 100%;
+    padding: 1rem;
+    border: 0.2px solid #aaa69d;
+    background-color: #d1ccc0 ;
+    border-radius: 2px;
+}
+h1 {
+    color: #2c2c54;
+    margin-bottom: 1rem;
+}
+form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#nomeNovaTarefa {
+    height: 40px;
+    font-size: 1.5rem;
+    border: 0.2px solid #aaa69d;
+    border-radius: 5px;
+}
+#btnNovaTarefa {
+    background-color: #ff793f;
+    font-size: 1.5rem;
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    color: #f7f1e3;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    line-height: 1;
+}
+
+main {
+    width: 100%;
+    flex: 1;
+    padding: 1rem;
+    border: 0.2px solid #aaa69d;
+    background-color: #d1ccc0 ;
+    border-radius: 2px;
+}
+.tarefa {
+    display: flex;
+    padding: 1rem 0;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ff793f;
+}
+.tarefa div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.descricao {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1;
+    color: #474787;
+}
+.descricaoActive {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1;
+    color: #474787;
+    text-decoration: line-through;
+    color: #218c74;
+}
+.btnConcluir {
+    min-width: 2rem;
+    min-height: 2rem;
+    padding: 0.5rem 0;
+    border-radius: 5px;
+    border: 2px solid #218c74;
+    
+}
+.btnConcluir:checked {
+    width: 2rem;
+    height: 2rem;
+    padding: 0.5rem 0;
+    border-radius: 5px;
+    border: 2px solid #218c74;
+    accent-color: #218c74;
+}
+.btnApagar {
+    background-color: #d1ccc0;
+    font-size: 2rem;
+    padding: 0.5rem;
+    font-weight: bold;
+    color: #b33939;
+    cursor: pointer;
+}
