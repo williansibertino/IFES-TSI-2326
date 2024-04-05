@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        // professor
+        function potenciaRecursiva (n,p) {
+            if(p == 0){
+                return 1;
+            } else {
+                return n * potenciaRecursiva(n, p-1);
+            }
+            console.log('O resultado e: ' + potenciaRecursiva(2,5));
+        }
+
+        // Arrow function com Operador ternario
+        let calcularPotenciaRecursiva = (numero, expoente) => resultado = (expoente == 0) ? 1 : 
+        numero * calcularPotenciaRecursiva(numero, expoente-1)
+        
+        console.log('Resultado de :' + calcularPotenciaRecursiva(10,5));
+    </script>
+</body>
+</html>

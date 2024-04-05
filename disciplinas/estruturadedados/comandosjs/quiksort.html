@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let quickSort = (vetor) => {
+            // condicao de parada
+            if (vetor.length <= 1) {
+                return vetor;
+            } else {
+                var pivotIndex = Math.floor(vetor.length / 2);
+                var pivot = vetor[pivotIndex];
+                var esquerda = [];
+                var direita = [];
+                for (var i = 0; i < vetor.length; i++) {
+                    if(i === pivotIndex){
+                        continue;
+                    }
+                    if (vetor[i] < pivot){
+                        esquerda.push(vetor[i]);
+                    } else {
+                        direita.push(vetor[i]);
+                    }
+                }
+            }
+            // Chamada Recursiva
+            return [...quickSort(esquerda), pivot, ...quickSort(direita)];
+        }
+    </script>
+</body>
+</html>

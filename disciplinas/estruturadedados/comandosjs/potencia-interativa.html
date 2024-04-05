@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        // Professor
+        function potencia(n, p) {
+            var resultado = 1;
+            if(p == 0){
+                alert('o resultado e 1');
+            } else {
+                for(var i=1; i <= p; i++){
+                    resultado = resultado * n;
+                }
+                console.log('O resultado de '+ n +" elevado a " + p + " e: " + resultado);
+            }
+        }
+        //potencia(2,5);
+
+        // Arrow Function
+        let calcularPotencia = (numero, expoente) => {
+            let resultado = 1;
+            if(expoente == 0){
+                console.log('O resultado e 1');
+            } else {
+                for(let i=1; i<= expoente; i++){ 
+                    resultado *= numero;
+                } 
+            }
+            console.log(`O resultado de ${numero} elevado a ${expoente} e: ${resultado}`);
+        } 
+        calcularPotencia(5,2);
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // mergesort
+        // duas funções
+        // primeira: ordenar e mesclar os subvetores
+        // segunda: subdividir o vetor
+
+        let merge = (esquerda, direita) => {
+            let ordenado = [];
+            while(esquerda.length >= 1 && direita.length >= 1) {
+                if(esquerda[0] < direita[0]) {
+                    ordenado.push(esquerda.shift());
+                } else {
+                    ordenado.push(direita.shift());
+                }
+            }
+            return [...ordenado, ...esquerda, ...direita];
+        }
+
+        let mergeSort = (vetor) => {
+            // condição de parada
+            if(vetor.length <= 1) {
+                return vetor;
+            }
+            let meio = Math.floor(vetor.length / 2);
+            // chamada recursiva a esquerda
+            let esquerda = mergeSort(vetor.slice(0, meio));
+            // chamada recursiva a direita
+            let direita = mergeSort(vetor.slice(meio));
+            return merge(esquerda, direita);
+        }
+    </script>
+</body>
+</html>

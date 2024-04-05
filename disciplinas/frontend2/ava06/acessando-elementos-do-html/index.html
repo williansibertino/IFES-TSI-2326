@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <header>
+        <nav id="header-nav" class="nav nav-list bg-color-dark">
+            <ul>
+                <li class="link link-nav">Curso de Javascript</li>
+                <li class="link link-nav">Módulos</li>
+                <li class="link link-nav">Links</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container m-5 bg-color-dark">
+        Texto do Menu
+        </div>
+    </main>
+<footer>
+    <nav class="nav nav-list nav-list-horizontal bg-color-dark">
+        <ul>
+            <li class="link link-nav">Desenvolvido por <span>Miltin</span></li>
+        </ul>
+    </nav>
+</footer>
+
+<button onclick="inserirTextoElementosPai()">Função 1 : Mudar textos de elementos pai</button>
+<button onclick="inserirTextoElementosFilho()">Função 2 : Mudar textos de elementos filho</button>
+
+
+    <script>
+        // a) Seleciona o elemento cujo ID é header-nav;
+        let menu = window.document.getElementById('header-nav');
+        console.log(menu);
+
+        /* b) Selecione todos os elementos que contenha a classe bg-color-dark. Posterior a isso, modifique
+        todos os elementos inserindo um novo texto. A descrição do texto é livre e deverá ser definida pelo aluno */
+        //exemplo 1: inserindo novo texto dentro da tag pai (header / main / footer)
+        let inserirTextoElementosPai = (mensagem) => {
+            let vetorElementos = window.document.getElementsByClassName('bg-color-dark');
+            console.log(vetorElementos);
+            for(let i=0; i < vetorElementos.length; i++) {
+            mensagem = i == 0 ? 'Novo Texto Header: ' : i == 1 ? 'Novo Texto Main' : 'Novo Texto Footer'
+            vetorElementos[i].innerHTML = prompt(mensagem);
+            }
+        }
+        //exemplo 2: inserindo novo texto dentro da tag filhos (li e div)
+        let inserirTextoElementosFilho = (mensagem) => {
+            let elementosLi = window.document.querySelectorAll('li');
+            let vetor = Array.from(elementosLi);
+            let elementoRestante = window.document.querySelector('.container');
+            vetor.push(elementoRestante);
+            console.log(vetor);
+            for(let i=0; i < vetor.length; i++) {
+            //mensagem = i == 0 ? 'Novo Texto Header: ' : i == 1 ? 'Novo Texto Main' : 'Novo Texto Footer'
+            vetor[i].innerHTML = prompt(mensagem);
+            }
+        }
+
+        // c) Explique com suas palavras, o quê aconteceria se você executasse o seguinte comando em javascript?
+        /* Resposta : Através do comando querySelectorAll, eu seleciono todos os elementos que possuem o nome de classe .nav e os 
+        salvo em uma variável declarada chamada navs, criando assim um vetor desses elementos. Dessa forma, é criado um laço for
+        que se inicia em 0 e termina no tamanho do vetor criado, salvo na variável .length. Sendo assim, a cada repetição, 
+        através do comando innerHTML, eu altero o texto dos elementos salvos no vetor 
+        para um texto escrito na mensagem "Novo Texto". */
+        //let navs = document.querySelectorAll('nav');
+        for(let k=0; k<navs.length; k++) {
+            navs[k].innerHTML = "Novo texto";
+        }
+
+    </script>
+</body>
+</html>
