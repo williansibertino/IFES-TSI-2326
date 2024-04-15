@@ -88,13 +88,13 @@
     </div>
     <div class="medias">
         <div>
-            <button id="A" value="A">A : Media Aritmética</button>
+            <button id="aritmetica">A : Media Aritmética</button>
         </div>
         <div>
-            <button id="P" value="P">P : Media Ponderada</button>
+            <button id="ponderada">P : Media Ponderada</button>
         </div>
         <div>
-            <button id="H" value="H">H : Media Harmonica</button>
+            <button id="harmonica">H : Media Harmonica</button>
         </div>
     </div>
     <div class="resultado">
@@ -102,7 +102,36 @@
     </div>
 
 
-    <script>/*
+    <script>
+        let mediaAritmetica = (nota1, nota2, nota3) => {
+            nota1  = parseFloat(document.getElementById('nota1').value);
+            nota2  = parseFloat(document.getElementById('nota2').value);
+            nota3  = parseFloat(document.getElementById('nota3').value);
+            
+            
+            
+        }
+
+        nota1  = window.document.getElementById('nota1').value;
+        console.log(nota1);
+
+        let aritmetica = window.document.getElementById('aritmetica');
+        aritmetica.addEventListener('click', mediaAritmetica);
+        console.log(aritmetica);
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /*
+    
         let btnMedia = window.document.getElementById('A');
         btnMedia = window.document.getElementById('P');
         btnMedia = window.document.getElementById('H');
@@ -122,7 +151,7 @@
             window.document.getElementById('resultado').appendChild(nota);
         }
 
-        calcularMedia;*/
+        calcularMedia;
         let soma;
 
         let imprimirNoHtml = (nota1, nota2, nota3, letra) => {
@@ -137,7 +166,7 @@
             btnMedia = (letra == 'A') ? (nota1 + nota2 + nota3) / 3 : 'teste';
         }
 
-        alert(imprimirNoHtml(soma));
+        alert(imprimirNoHtml(soma));*/
     </script>
 </body>
 </html>
