@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criando um Arrow Function e inserindo informações no HTML usando Javascript</title>
+    <link rel="stylesheet" href="css/main.css ">
+</head>
+<body>
+    <header>
+        <h1>
+            Digite 03 notas no sistema abaixo e selecione a media desejada.
+        </h1>
+    </header>
+    <div>
+        <form class="notas">
+            <div>
+                <label>Nota 1</label><br>
+                <input id="nota1" type="number" value="0">
+            </div>
+            <div>
+                <label>Nota 2</label><br>
+                <input id="nota2" type="number" value="0">
+            </div>
+            <div>
+                <label>Nota 3</label><br>
+                <input id="nota3" type="number" value="0">
+            </div>
+        </form>
+    </div>
+    <div class="medias">
+        <div>
+            <button id="aritmetica">A : Media Aritmética</button>
+        </div>
+        <div>
+            <button id="ponderada">P : Media Ponderada</button>
+        </div>
+        <div>
+            <button id="harmonica">H : Media Harmonica</button>
+        </div>
+    </div>
+    <div class="resultado">
+        <p id="resultado">Resultado</p>
+    </div>
+
+    <script src="script/main.js"></script>
+</body>
+</html>
