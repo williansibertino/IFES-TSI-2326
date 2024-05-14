@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filas Ordenadas</title>
+</head>
+<body>
+    <h1>Filas Ordenadas</h1>
+    <p>Faça uma função que receba três filas, duas já preenchidas em ordem crescente e preencha a ultima com os valores das duas primeiras em ordem crescente.</p>
+    <p>Exemplo:<br>
+        Fila 1: | 2 | 4 | 6 | 8 | 10 | 12 | 14 | 16 | 18 | 20 |<br>
+        Fila 2: | 1 | 3 | 5 | 7 | 9 | 11 | 13 | 15 | 17 | 19 |<br>   
+        Fila 3: | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 |</p>
+    <hr>
+
+    <script>
+        
+        let terceiraFila = (fila1, fila2) => {
+        let fila3 = [];
+        let i = 0, j = 0;
+
+        // Enquanto houver elementos em ambas as filas
+        while (i < fila1.length && j < fila2.length) {
+            // Comparar os elementos das duas filas e adicionar o menor à fila3
+            if (fila1[i] < fila2[j]) {
+                fila3.push(fila1[i]);
+                i++;
+            } else {
+                fila3.push(fila2[j]);
+                j++;
+            }
+        }
+
+        // Adicionar os elementos restantes da fila1 à fila3, se houver
+        while (i < fila1.length) {
+            fila3.push(fila1[i]);
+            i++;
+        }
+
+        // Adicionar os elementos restantes da fila2 à fila3, se houver
+        while (j < fila2.length) {
+            fila3.push(fila2[j]);
+            j++;
+        }
+
+        return fila3;
+}
+
+    // Arrays do exemplo do exercício
+    let fila1 = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20];
+    let fila2 = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19];
+
+    let fila3 = terceiraFila(fila1, fila2);
+    console.log("Fila 3:", fila3);
+
+    </script>
+</body>
+</html>

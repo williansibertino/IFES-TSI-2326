@@ -1,0 +1,17 @@
+body {
+    background-color: #f8f8f8;
+
+}
+.produtos {
+    background-color: #001;
+    width: 300px;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    font: normal 15px Arial;
+    color: #fff;
+    margin: 1rem;
+}
+.data {
+    font-size: 10px;
+    font-style: italic;
+}
